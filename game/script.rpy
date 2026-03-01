@@ -2,11 +2,11 @@
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
-define b = Character("bunny")
-image b idle = "bunny.png"
+define b = Character("kx2bunny")
+image b idle = "mole1.png"
 
-define m = Character("mole")
-image m idle = "mole.png"
+define m = Character("mk47mole")
+image m idle = "mole2.png"
 
 define n = Character("narator")
 image n idle = "placeholder"
@@ -30,39 +30,78 @@ label start:
 
     # These display lines of dialogue.
 
-    n "In a quiet meadow lived a bunny who loved to hop and play in the sun."
+    n "In a downtown toronto"
 
-    n "Beneath that same meadow lived a mole who preferred the darkness of his tunnels."
+    n "kx2bunny was walkinh down queen st"
 
-    n "One day, Bunny noticed small mounds of dirt everywhere and went to investigate."
+    n "kx2bunny sees mk47mole"
 
-    n "Just then, out popped a tiny mole, covered in dirt and looking very confused."
+    n "they re from opposing gangs"
 
     n "The two unlikely friends would soon discover they had more in common than they thought."
     
     show b idle
 
-    b "Who is doing this to my beautiful meadow?"
+    b "yo fam, nize your gerp"
+    
+    n "nunny says on the phone while walking alone the street"
 
-    b "These holes are everywhere! I could twist my ankle!"
+    b "These pot holes are everywhere! I could twist my ankle!"
 
-    b "Wait... you're actually a mole? I've never seen one before!"
+    n "The bunny sees the mole emerge from the ground. she thinks he caused the holes... What should she do?"
 
-    b "I'm sorry for being so harsh. Would you like to be my friend?"
+    menu:
+        "Try to talk to him calmly":
+            jump friendly_choice
+        "Attack him in anger":
+            jump angry_choice
 
-    b "Come on, let me show you how wonderful the surface world can be!"
+    label friendly_choice:
+        b "gerbert please stop making holes!"
 
-    show m idle
+        b "i might twist my ankle!"
 
-    m "I'm so sorry! I was just digging tunnels looking for food and worms."
+        show m idle
 
-    m "I didn't know anyone lived up here. I've never been above ground before."
+        m "no fam, watch ur gaze or my holes will slime you"
 
-    m "The darkness underground is all I've ever known. It feels safe down there."
+        m "ur the real gerbert is you dont know that my holes take out whole gangs"
 
-    m "Really? You want to spend time with me even though I made those holes?"
+        b "yo watch your mouth or youll get sprayed"
 
-    m "I'd love that! Maybe you could teach me about the sun and the grass!"
+        m "mk47mole runs these street cro, go anf call your uber"
+
+        n "And so began a beautiful friendship between the bunny and the mole."
+
+        jump ending
+
+    label angry_choice:
+        b "YOU! WATCH YOURSELF MANS"
+
+        n "The bunny pulls out his blicky"
+
+        b "Get out of my street right now!"
+
+        show m idle
+
+        m "nah, your a yute to these roads"
+
+        b "im not a yute, you dess man"
+
+        m "DESS MAN?? yo run up im cheesed"
+
+        b "Wait... I... I'm sorry. That was too harsh. You didn't deserve that."
+
+        b "wallahi i dont give a shite"
+
+        n "mk47mole scares kx2bunny away, and peace is restored to toronto"
+
+        jump ending
+
+    label ending:
+        n "Whether through kindness or redemption, the bunny and mole became true friends."
+
+        n "They learned that understanding and forgiveness are the greatest gifts."
 
     # This ends the game.
 
