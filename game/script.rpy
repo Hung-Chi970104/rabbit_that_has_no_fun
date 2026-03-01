@@ -11,6 +11,14 @@ image m idle = "mole2.png"
 define n = Character("narator")
 image n idle = "placeholder"
 
+transform left_side:
+    xcenter 0.25
+    yalign 1.0
+
+transform right_side:
+    xcenter 0.75
+    yalign 1.0
+
 
 # The game starts here.
 
@@ -61,7 +69,8 @@ label start:
 
         b "i might twist my ankle!"
 
-        show m idle
+        show b idle at left_side
+        show m idle at right_side
 
         m "no fam, watch ur gaze or my holes will slime you"
 
@@ -82,7 +91,8 @@ label start:
 
         b "Get out of my street right now!"
 
-        show m idle
+        show b idle at left_side
+        show m idle at right_side
 
         m "nah, your a yute to these roads"
 
